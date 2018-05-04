@@ -1,27 +1,30 @@
-# AngularGoogleChartTest
+# Angular Google Chart Component
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
-## Development server
+## How To Use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Import Google Chart Module to your module file : `import {GoogleChartModule} from './angular-google-chart/google-chart.module';`
 
-## Code scaffolding
+Add component in HTML
+`<google-chart [chartType]="'LineChart'" [dataPromise]="dataPromise" [options]="options" (onSelect)="onSelect($event)" ></google-chart>`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Options
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+`ChartType` - Type of Chart 
 
-## Running unit tests
+`dataPromise` - Promise to fetch data
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`options` - Google Chart Option Object [Google Chart Customization](https://developers.google.com/chart/interactive/docs/basic_customizing_chart)
 
-## Running end-to-end tests
+`onSelect` - Event which will ne called on selecting data points on chart
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**Inbuild Google Library Loading** - All related library and packages will be loaded throgh component so no need to include explicitly and loading chart relaed packages
+
+**Data Changes Aware** - Component is data changes aware so in case of changes in data promise, chart will rerender again automatically.
+
+**Option Changes Aware** - Any changes made to Google Option Object, will be automatically drawn to chart.
