@@ -12,13 +12,30 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Options
 
-- `ChartType` - Type of Chart 
+- `chartType` - Type of Chart. For example: `LineChart, ScatterChart,AreaChart,BarChart,BubbleChart,CandlestickChart,ColumnChart,ComboChart,PieChart,Gantt,Gauge,GeoChart,Histogram,OrgChart,Sankey,SteppedAreaChart,Table,Timeline,TreeMap,WordTree,Calendar,Map` 
 
 - `dataPromise` - Promise to fetch data
 
 - `options` - Google Chart Option Object [Google Chart Customization](https://developers.google.com/chart/interactive/docs/basic_customizing_chart)
 
+- `config` - Chart additional configuration object. For example, chart data does not have header & starts with row only then set `firstRowAsData` as true.
+
+- `onInit` - Event which will be fired when angular chart component will be initialized with `ChartWrapper`. It will return `div` - dynamic generated div Id for reference & `wrapper` - Reference to `ChartWrapper` to make changes and modify chart configuration and data manually
+
+- `onReady` - Event which fires every time chart is rendered & ready with new data or options. This event has no parameters.
+
+- `onError` - Event which fires on error while rendering chart.
+
 - `onSelect` - Event which will ne called on selecting data points on chart
+
+
+## Configuration
+
+Provided `angular-google-chart.config` JSON file which has following configuration options:
+
+- `packages` - Packages to load. This is depend on chart type you use. 
+
+- `mapsApiKey` - Google Developer API Key in order to access google map JS API.
 
 
 ## Features

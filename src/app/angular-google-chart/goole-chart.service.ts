@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import {CommonService} from './common.service';
 import {GoogleChartConstants} from './google-chart-constants';
 
+
 declare var google: any;
+declare var require: any
 
 @Injectable()
 export class GoogleChartService {
@@ -11,12 +13,21 @@ export class GoogleChartService {
  	visualizePromise : any;
  	wrapperPromise : any;
 
-
-
 	constructor(private commonService : CommonService){
-
+	let config = require('./angular-google-chart.config.json');
+	
+	console.log('config::',config);
 	let _this = this;
 	let loaderPromise = commonService.loadFile(GoogleChartConstants.GOOGLE_CHART_LOADER_URL);
+	loaderPromise.then(function(){
+		google.charts.load('current', {
+		  callback: function () {
+		     console.log('GoogleService : constructor :: Packages Loaded');
+		  },
+		  packages: config.packages, //Bar, Gant - Gant,gauge,geochart
+		  "mapsApiKey": config.mapsApiKey
+		});
+	});
 	_this.googleServicePromise = new Promise(function(resolve, reject){
 			_this.googlePromise = commonService.isLoaded('google',undefined);
 			_this.googlePromise.then(function(){
@@ -30,16 +41,7 @@ export class GoogleChartService {
 				chartWrapper : _this.wrapperPromise
 			});
 		});
-	loaderPromise.then(function(){
-		google.charts.load('current', {
-		  callback: function () {
-		     console.log('GoogleService : constructor :: Packages Loaded');
-		  },
-		  packages: ['corechart','line']
-		});
-
-
-	});
+	
 	
 	
 	}

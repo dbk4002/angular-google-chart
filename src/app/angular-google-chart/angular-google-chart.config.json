@@ -1,0 +1,5 @@
+{
+	"useGeoMap" : false,
+	"packages" : ["corechart","line","calendar","gantt","gauge","geochart","map","orgchart","sankey","table","timeline","treemap","wordtree"],
+	"mapsApiKey" : "AIzaSyDahT_0GHDY9H4fcDhV6dyIgz1RGs9j9QI"
+}
