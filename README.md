@@ -1,6 +1,6 @@
 # Angular Google Chart Component
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 
 ## How To Use
 
@@ -45,6 +45,10 @@ Provided `angular-google-chart.config` JSON file which has following configurati
 - **Data Changes Aware** - Component is data changes aware so in case of changes in data promise, chart will rerender again automatically.
 
 - **Option Changes Aware** - Any changes made to Google Option Object, will be automatically drawn to chart.
+
+## Demo
+
+Please refer `demo.component` for all chart type demo.
 
 ## Screenshot
 
