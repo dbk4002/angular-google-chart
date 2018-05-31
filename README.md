@@ -52,6 +52,10 @@ Setup latest angular CLI(6.0.7) then clone this repo and fire command `ng serve`
 
 Please refer `demo.component` for all chart type demo.
 
+## Roadmap
+
+Reffer [Wiki](https://github.com/dbk4002/angular-google-chart/wiki)
+
 ## Screenshot
 
 ![alt text](https://github.com/dbk4002/angular-google-chart/raw/master/Untitled.png)
