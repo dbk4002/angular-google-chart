@@ -48,6 +48,8 @@ Provided `angular-google-chart.config` JSON file which has following configurati
 
 ## Demo
 
+Setup latest angular CLI(6.0.7) then clone this repo and fire command `ng serve`
+
 Please refer `demo.component` for all chart type demo.
 
 ## Screenshot
