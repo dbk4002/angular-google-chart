@@ -12,7 +12,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Options
 
-- `chartType` - Type of Chart. For example: `LineChart, ScatterChart,AreaChart,BarChart,BubbleChart,CandlestickChart,ColumnChart,ComboChart,PieChart,Gantt,Gauge,GeoChart,Histogram,OrgChart,Sankey,SteppedAreaChart,Table,Timeline,TreeMap,WordTree,Calendar,Map` 
+- `chartType` - Type of Chart. For example: `LineChart, ScatterChart, AreaChart, BarChart, BubbleChart, CandlestickChart, ColumnChart, ComboChart, PieChart, Gantt,Gauge, GeoChart, Histogram, OrgChart, Sankey, SteppedAreaChart, Table, Timeline, TreeMap, WordTree, Calendar, Map` 
 
 - `dataPromise` - Promise to fetch data
 
@@ -52,4 +52,4 @@ Please refer `demo.component` for all chart type demo.
 
 ## Screenshot
 
-![alt text](https://github.com/dbk4002/angular-google-chart/raw/master/Angular%20Google%20Chart%20Demo.png)
+![alt text](https://github.com/dbk4002/angular-google-chart/raw/master/Untitled.png)
